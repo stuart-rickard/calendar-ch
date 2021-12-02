@@ -1,0 +1,106 @@
+{
+    "sourceFile": "Develop/script.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1638115497070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638418856808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+const allButtons = document.getElementsByClassName('test');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+        alert('clicked btn')\r\n+    })\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638418979908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+        \r\n+\r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638419145731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,17 @@\n //uploadEvents\r\n //downloadEvents\r\n //listener\r\n \r\n+\r\n+\r\n const allButtons = document.getElementsByClassName('saveBtn');\r\n \r\n \r\n for(var i =0; i < allButtons.length; i++){\r\n     allButtons[i].addEventListener('click', function(){\r\n       \r\n-        \r\n+        alert('clicked btn')\r\n \r\n         // grab the sibilibgs of the save button\r\n \r\n         // save to localStorage\r\n@@ -19,19 +21,4 @@\n }\r\n \r\n \r\n \r\n-// opened to store code clips\r\n-//clockChecker\r\n-//uploadEvents\r\n-//downloadEvents\r\n-//listener\r\n-\r\n-const allButtons = document.getElementsByClassName('test');\r\n-\r\n-\r\n-for(var i =0; i < allButtons.length; i++){\r\n-    allButtons[i].addEventListener('click', function(){\r\n-        alert('clicked btn')\r\n-    })\r\n-}\n-// opened to store code clips\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638419560615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,12 @@\n //uploadEvents\r\n //downloadEvents\r\n //listener\r\n \r\n+arrayEvents = {\r\n+    time: \"\";\r\n+    event: \"\";\r\n+}\r\n \r\n \r\n const allButtons = document.getElementsByClassName('saveBtn');\r\n \r\n@@ -13,8 +17,10 @@\n     allButtons[i].addEventListener('click', function(){\r\n       \r\n         alert('clicked btn')\r\n \r\n+        console.log(allButtons[i].parentNode.childNodes)\r\n+        \r\n         // grab the sibilibgs of the save button\r\n \r\n         // save to localStorage\r\n     })\r\n"
+                },
+                {
+                    "date": 1638419585927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,11 @@\n //uploadEvents\r\n //downloadEvents\r\n //listener\r\n \r\n-arrayEvents = {\r\n-    time: \"\";\r\n-    event: \"\";\r\n-}\r\n \r\n \r\n+\r\n const allButtons = document.getElementsByClassName('saveBtn');\r\n \r\n \r\n for(var i =0; i < allButtons.length; i++){\r\n"
+                },
+                {
+                    "date": 1638419760072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     allButtons[i].addEventListener('click', function(){\r\n       \r\n         alert('clicked btn')\r\n \r\n-        console.log(allButtons[i].parentNode.childNodes)\r\n+        console.log(this.parentNode)\r\n         \r\n         // grab the sibilibgs of the save button\r\n \r\n         // save to localStorage\r\n"
+                },
+                {
+                    "date": 1638419825312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     allButtons[i].addEventListener('click', function(){\r\n       \r\n         alert('clicked btn')\r\n \r\n-        console.log(this.parentNode)\r\n+        console.log(this.parentNode.childNodes)\r\n         \r\n         // grab the sibilibgs of the save button\r\n \r\n         // save to localStorage\r\n"
+                },
+                {
+                    "date": 1638419861330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+\r\n+\r\n+        console.log(this.parentNode.childNodes.find('textareas'))\r\n+        \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638419890767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+\r\n+\r\n+        console.log(this.parentNode.childNodes.find('textarea'))\r\n+        \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638419985566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+\r\n+\r\n+        console.log(this.parentNode.childNodes)\r\n+        \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638420108521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,14 @@\n \r\n for(var i =0; i < allButtons.length; i++){\r\n     allButtons[i].addEventListener('click', function(){\r\n       \r\n+        const hour = this.parentNode.childNodes[1];\r\n+        const event = this.parentNode.childNodes[3]\r\n \r\n+        console.log('hour', hour);\r\n \r\n-        console.log(this.parentNode.childNodes)\r\n+        console.log('event',event)\r\n         \r\n         // grab the sibilibgs of the save button\r\n \r\n         // save to localStorage\r\n@@ -24,85 +27,4 @@\n }\r\n \r\n \r\n \r\n-// opened to store code clips\r\n-//clockChecker\r\n-//uploadEvents\r\n-//downloadEvents\r\n-//listener\r\n-\r\n-\r\n-\r\n-\r\n-const allButtons = document.getElementsByClassName('saveBtn');\r\n-\r\n-\r\n-for(var i =0; i < allButtons.length; i++){\r\n-    allButtons[i].addEventListener('click', function(){\r\n-      \r\n-\r\n-\r\n-        console.log(this.parentNode.childNodes.find('textarea'))\r\n-        \r\n-        // grab the sibilibgs of the save button\r\n-\r\n-        // save to localStorage\r\n-    })\r\n-}\r\n-\r\n-\r\n-\r\n-// opened to store code clips\r\n-//clockChecker\r\n-//uploadEvents\r\n-//downloadEvents\r\n-//listener\r\n-\r\n-\r\n-\r\n-\r\n-const allButtons = document.getElementsByClassName('saveBtn');\r\n-\r\n-\r\n-for(var i =0; i < allButtons.length; i++){\r\n-    allButtons[i].addEventListener('click', function(){\r\n-      \r\n-\r\n-\r\n-        console.log(this.parentNode.childNodes.find('textareas'))\r\n-        \r\n-        // grab the sibilibgs of the save button\r\n-\r\n-        // save to localStorage\r\n-    })\r\n-}\r\n-\r\n-\r\n-\r\n-// opened to store code clips\r\n-//clockChecker\r\n-//uploadEvents\r\n-//downloadEvents\r\n-//listener\r\n-\r\n-\r\n-\r\n-\r\n-const allButtons = document.getElementsByClassName('saveBtn');\r\n-\r\n-\r\n-for(var i =0; i < allButtons.length; i++){\r\n-    allButtons[i].addEventListener('click', function(){\r\n-      \r\n-        alert('clicked btn')\r\n-\r\n-        console.log(this.parentNode.childNodes)\r\n-        \r\n-        // grab the sibilibgs of the save button\r\n-\r\n-        // save to localStorage\r\n-    })\r\n-}\r\n-\r\n-\r\n-\r\n"
+                },
+                {
+                    "date": 1638420266010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,11 @@\n       \r\n         const hour = this.parentNode.childNodes[1];\r\n         const event = this.parentNode.childNodes[3]\r\n \r\n-        console.log('hour', hour);\r\n+        console.log(hour);\r\n \r\n-        console.log('event',event)\r\n+        console.log(event)\r\n         \r\n         // grab the sibilibgs of the save button\r\n \r\n         // save to localStorage\r\n"
+                },
+                {
+                    "date": 1638420341942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+        const hour = this.parentNode.childNodes[1];\r\n+        const event = this.parentNode.childNodes\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event)\r\n+        \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638420470266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+        const hour = this.parentNode.childNodes[1];\r\n+        const event = this.parent;\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event)\r\n+        \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638420545868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+        const hour = this.parentNode.childNodes[1];\r\n+        const event = this.previousElementSibling;\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event)\r\n+        \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638420691227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+        const hour = this.parentNode.childNodes[1];\r\n+        const event = this.previousElementSibling;\r\n+\r\n+        console.log(this.querySelector(\"::before\"));\r\n+        \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638420748026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(){\r\n+      \r\n+        const hour = this.parentNode.childNodes[1];\r\n+        const event = this.previousElementSibling;\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event);\r\n+        console.log(this.querySelector(\"::before\");        \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638420777130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(e){\r\n+        e.preventDefault();\r\n+        const hour = this.parentNode.childNodes[1];\r\n+        const event = this.previousElementSibling;\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event);\r\n+     \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638420892649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(e){\r\n+        e.preventDefault();\r\n+        const hour = this.parentNode.childNodes[1].innerText;\r\n+        const event = this.previousElementSibling;\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event);\r\n+     \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638455520874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(e){\r\n+        \r\n+        const hour = this.parentNode.childNodes[1].innerText;\r\n+        const event = this.previousElementSibling;\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event);\r\n+     \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638455613251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+//undo button (optional)\r\n+// color on entry; goes away if another box is clicked (native?)\r\n+\r\n+\r\n+\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(e){\r\n+        \r\n+        const hour = this.parentNode.childNodes[1].innerText;\r\n+        const event = this.previousElementSibling;\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event);\r\n+     \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1638482750612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+// opened to store code clips\r\n+//clockChecker\r\n+//uploadEvents\r\n+//downloadEvents\r\n+//listener\r\n+//undo button (optional)\r\n+// color on entry; saves if another box is clicked\r\n+\r\n+// use onblur and/or onsubmit https://www.w3schools.com/tags/ref_eventattributes.asp\r\n+// looks like .description is used for event description?\r\n+\r\n+const allButtons = document.getElementsByClassName('saveBtn');\r\n+\r\n+\r\n+for(var i =0; i < allButtons.length; i++){\r\n+    allButtons[i].addEventListener('click', function(e){\r\n+        \r\n+        const hour = this.parentNode.childNodes[1].innerText;\r\n+        const event = this.previousElementSibling;\r\n+\r\n+        console.log(hour);\r\n+\r\n+        console.log(event);\r\n+     \r\n+        // grab the sibilibgs of the save button\r\n+\r\n+        // save to localStorage\r\n+    })\r\n+}\r\n+\r\n+\r\n+\r\n"
+                }
+            ],
+            "date": 1638115497070,
+            "name": "Commit-0",
+            "content": "// opened to store code clips\r\n"
+        }
+    ]
+}
