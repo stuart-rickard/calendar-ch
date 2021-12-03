@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Develop/style.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1638484402362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638484557008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,71 @@\n+body {\n+  font-family: 'Open Sans', sans-serif;\n+  font-size: 16px;\n+  line-height: 1;\n+}\n+\n+textarea{\n+  background: transparent;\n+  border: none;\n+  resize: none;\n+  color: #000000;\n+  border-left: 1px solid black;\n+  padding: 10px;\n+}\n+\n+.jumbotron {\n+  text-align: center;\n+  background-color: transparent;\n+  color: black;\n+  border-radius: 0;\n+  border-bottom: 10px solid black;\n+}\n+\n+.description{\n+  white-space: pre-wrap;\n+}\n+\n+.time-block{\n+  text-align: center;\n+  border-radius: 15px;\n+}\n+\n+.row {\n+  white-space: pre-wrap;\n+  height: 80px;\n+  border-top: 1px solid white;;\n+}\n+\n+.hour {\n+  background-color: #ffffff;\n+  color: #000000;\n+  border-top: 1px dashed #000000;\n+}\n+\n+.past {\n+  background-color: #d3d3d3;\n+  color: white;\n+}\n+\n+.present {\n+  background-color: #ff6961;\n+  color: white;\n+}\n+\n+.future {\n+  background-color: #77dd77;\n+  color: white;\n+}\n+\n+.saveBtn {\n+  border-left: 1px solid black;\n+  border-top-right-radius: 15px;\n+  border-bottom-right-radius: 15px;\n+  background-color: #06AED5;\n+  color: white;\n+}\n+\n+.saveBtn i:hover {\n+  font-size: 30px;\n+  transition: all .3s ease-in-out;\n+}\n"
+                }
+            ],
+            "date": 1638484402362,
+            "name": "Commit-0",
+            "content": "body {\n  font-family: 'Open Sans', sans-serif;\n  font-size: 16px;\n  line-height: 1;\n}\n\ntextarea{\n  background: transparent;\n  border: none;\n  resize: none;\n  color: #000000;\n  border-left: 1px solid black;\n  padding: 10px;\n}\n\n.jumbotron {\n  text-align: center;\n  background-color: transparent;\n  color: black;\n  border-radius: 0;\n  border-bottom: 10px solid black;\n}\n\n.description{\n  white-space: pre-wrap;\n}\n\n.time-block{\n  text-align: center;\n  border-radius: 15px;\n}\n\n.row {\n  white-space: pre-wrap;\n  height: 80px;\n  border-top: 1px solid white;;\n}\n\n.hour {\n  background-color: #ffffff;\n  color: #000000;\n  border-top: 1px dashed #000000;\n}\n\n.past {\n  background-color: #d3d3d3;\n  color: white;\n}\n\n.present {\n  background-color: #ff6961;\n  color: white;\n}\n\n.future {\n  background-color: #77dd77;\n  color: white;\n}\n\n.saveBtn {\n  border-left: 1px solid black;\n  border-top-right-radius: 15px;\n  border-bottom-right-radius: 15px;\n  background-color: #06AED5;\n  color: white;\n}\n\n.saveBtn i:hover {\n  font-size: 36px;\n  transition: all .3s ease-in-out;\n}\n"
+        }
+    ]
+}

@@ -30,44 +30,90 @@
     </header>
     <div class="container row">
       <!-- Timeblocks go here -->
+      <!-- add label for accessibility; requires id -->
+      <label></label>         
       <div class="col-12 row time-block">
-        <div class="col-1 hour">8 AM</div>
-        <label></label> 
-        <!-- add label for accessibility; requires id -->
-        <textarea class="col-9 past" name="8-text" placeholder="enter event here"></textarea>
-        <button class="col-2 saveBtn"><i class="far fa-save" font-size="18px"></i></button>
+        <div class="col-1 hour" id="0800">8 AM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
       </div>
       <div class="col-12 row time-block">
-        <div class="col-1 hour">9 AM</div>
-        <textarea class="col-9"></textarea>
-        <button class="col-2 saveBtn">SV</button>
+        <div class="col-1 hour" id="0900">9 AM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
       </div>
       <div class="col-12 row time-block">
-        <div class="col-1 hour">10 AM</div>
-        <textarea class="col-9"></textarea>
-        <button class="col-2 saveBtn">SV</button>
+        <div class="col-1 hour" id="1000">10 AM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
       </div>
       <div class="col-12 row time-block">
-        <div class="col-1 hour">11 AM</div>
-        <textarea class="col-9"></textarea>
-        <button class="col-2 saveBtn">SV</button>
+        <div class="col-1 hour" id="1100">11 AM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
       </div>
-      <!-- classes to use
-      textarea - background is transparent
-      description - white-space is pre-wrap (autofill suggests pre-wrap is a type of html element?)
-      time-block (autofill suggests time-block is a type of html element?)
-      row
-      hour
+      <div class="col-12 row time-block">
+        <div class="col-1 hour" id="1200">12 PM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="col-12 row time-block">
+        <div class="col-1 hour" id="1300">1 PM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="col-12 row time-block">
+        <div class="col-1 hour" id="1400">1 PM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="col-12 row time-block">
+        <div class="col-1 hour" id="1500">2 PM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="col-12 row time-block">
+        <div class="col-1 hour" id="1600">3 PM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="col-12 row time-block">
+        <div class="col-1 hour" id="1700">4 PM</div>
+        <textarea class="col-9 future" name="8-text" placeholder="enter event here"></textarea>
+        <button class="col-2 saveBtn" style="font-size: 24px">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
       
-      past
-      present
-      future
-
-      saveBtn
-      saveBtn i:hover (what is i?) -->
+      <!-- classes to use
+      description - white-space is pre-wrap (autofill suggests pre-wrap is a type of html element?)
+      time-block (autofill suggests time-block is a type of html element?)(where does time-block class need to go?)
+       -->
 
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"></script>
+    <script>
+      dayjs().format()
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- create js file and link here -->
