@@ -17,15 +17,24 @@ var todaysEventsArray = {
 const dateInHeader = document.getElementById("currentDay");
 const allTextAreas = document.getElementsByTagName('textarea');
 const allTimeBlocks = document.getElementsByClassName('time-block');
+var intervalToNextColorCheck = ( 60 * 1000 );
+var testMode = false;
+
+var timeCheck = function(format){
+    var d = dayjs().format(format);
+    if (testMode) {
+        debugger;
+    };
+    return d;
+}
 
 var createEmptyTodaysEventsArray = function(){
-    todaysEventsArray.date = dayjs().format("YYYYMMDD");
+    todaysEventsArray.date = timeCheck("YYYYMMDD");
     todaysEventsArray.arrayHourAndText = emptyHourAndTextArray;
 }
 
 var uploadNewEvent = function(hour,text){
     // update todaysEventsArray
-    debugger;
     for ( i=0 ; i<allTimeBlocks.length; i++ ){
         if (todaysEventsArray.arrayHourAndText[i].hour == hour){
             todaysEventsArray.arrayHourAndText[i].textValue = text;
@@ -40,7 +49,7 @@ var downloadTodaysEvents = function(){
     // check whether localStorage has today's events
     if ( localStorageDownload !== null ){
         localStorageDownload = JSON.parse(localStorageDownload);
-        if ( localStorageDownload.date == dayjs().format("YYYYMMDD") ){
+        if ( localStorageDownload.date == timeCheck("YYYYMMDD") ){
             todaysEventsArray = localStorageDownload;
         } else {
             createEmptyTodaysEventsArray();
@@ -62,40 +71,44 @@ var displayTodaysEvents = function(){
 }
 
 var addDateToHeader = function(){
-    dateInHeader.innerText = dayjs().format( "dddd, MMMM D" )
+    dateInHeader.innerText = timeCheck( "dddd, MMMM D" )
 }
 
-var rightNowInMilitary = dayjs().format("HHmm");
+// determine how much time is there to the next hour
+var updateIntervalToNextColorCheck = function() {
+    // check second and minutes separately, then combine
+    var seconds = 60 - timeCheck("ss");
+    var minutes = 60 - timeCheck("mm");
+    // set interval to the amount of time to the next hour plus five seconds to be sure that we are checking after the new hour has happened
+    var intervalInMilliseconds = ( 5000 + ( seconds * 1000 ) + ( minutes * 60 * 1000 ));
+    if (testMode) {
+        debugger;
+    }
+    return intervalInMilliseconds;
+};
 
 var colorTimeBlocks = function(){
-    // this sub-function determines how much time is there to the next hour
-    var intervalToNextColor = function() {
-        // check second and minutes separately, then combine
-        var seconds = 60 - dayjs().format("ss");
-        var minutes = 60 - dayjs().format("mm");
-        // set interval to the amount of time to the next hour plus two seconds to be sure that we are checking after the new hour has happened
-        var intervalInMilliseconds = ( 2000 + ( seconds * 1000 ) + ( minutes * 60 * 1000 ));
-        return intervalInMilliseconds;
-    }
-    clearInterval(interval);
+    console.log( "colorTimeBlocks function start: " + timeCheck("YYYY-MM-DD HH:mm:ss"));
+    var timeHoursMinutes = timeCheck("HHmm");
     for ( i=0 ; i<allTimeBlocks.length ; i++ ){
-        if ( allTimeBlocks[i].children[1].id < rightNowInMilitary ){
+        if ( allTimeBlocks[i].children[1].id > timeHoursMinutes ){
             // color changes are made by changing the class
+            allTimeBlocks[i].children[1].className = "col-9 future";
+        } else {
             allTimeBlocks[i].children[1].className = "col-9 past";
-            if ( ( rightNowInMilitary - allTimeBlocks[i].children[1].id ) < 60 ) {
+            if ( ( timeHoursMinutes - allTimeBlocks[i].children[1].id ) < 60 ) {
                 allTimeBlocks[i].children[1].className = "col-9 present";
             }
-        } else {
-            allTimeBlocks[i].children[1].className = "col-9 future";
         }
     }
     // reset upon transition to a new day
-    if ( todaysEventsArray.date != dayjs().format("YYYYMMDD") ) {
+    if ( todaysEventsArray.date != timeCheck("YYYYMMDD") ) {
         addDateToHeader();
         displayTodaysEvents();
     };
     // update colors two seconds after the hour changes
-    interval = setInterval( colorTimeBlocks, intervalToNextColor() );
+    intervalToNextColorCheck = updateIntervalToNextColorCheck();
+    setTimeout( colorTimeBlocks, intervalToNextColorCheck );
 }
 
 var newEvent = function(e){
@@ -113,4 +126,4 @@ var activateEventListenersForTextAreas = function() {
 addDateToHeader();
 displayTodaysEvents();
 activateEventListenersForTextAreas();
-var interval = setInterval( colorTimeBlocks, 0 );
+colorTimeBlocks();
