@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1638750524393,
@@ -12,6 +12,10 @@
                 {
                     "date": 1638751049769,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n ## Screenshot\n \n Here is a screenshot of the webpage:\n \n-\n+![screenshot of the work day scheduler](/work_day_scheduler_screenshot.png)\n"
+                },
+                {
+                    "date": 1638751465838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n 2. Created code to display the events.  When the site is first loaded, the code checks whether there is an existing calendar events file for the current day in `localStorage`.  If there is, those events are saved to the DOM.\n 3. Created code to accept new events.  This is done using `addEventListener` which is fired upon a `blur` in a `textArea`.  The event information is used to save the new text to `localStorage`.\n 4. Created code to change the color of the `textArea` elements depending on whether they are past, present, or future.  This code also checks for a new day in case the user leaves the browser open overnight.\n \n-I used `setTimeout` to check hourly for time changes.  Testing indicated that `setTimeout` is not precise.  That is, although the argument is in milliseconds, the length of the timeout period can be substantial (on the order of 90 seconds in an hour).  Therefore an improvement would be to have an updated time check perhaps two minutes before the change of hour so that the `setTimeout` period can be refined when there is a shorter amount of time until the change of hour.\n+I used `setTimeout` to check hourly for time changes.  Testing indicated that `setTimeout` is not precise.  That is, although the argument is in milliseconds, the length of the timeout period can be substantial (on the order of 90 seconds in an hour).  Therefore an improvement would be to have an updated time check perhaps two minutes before the change of hour so that the `setTimeout` period can be refined when there is a shorter amount of time until the change of hour.  I have made this an issue on Github.\n   \n ## Link to Live Work Day Scheduler\n   \n The live work day scheduler webpage can be found at this link: \n"
                 }
             ],
             "date": 1638750524393,
