@@ -26,4 +26,4 @@ https://stuart-rickard.github.io/calendar-ch/Develop/index.html
 
 Here is a screenshot of the webpage:
 
-
+![screenshot of the work day scheduler](/work_day_scheduler_screenshot.png)
